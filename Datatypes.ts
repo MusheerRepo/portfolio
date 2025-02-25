@@ -1,3 +1,4 @@
+// Book borrow system
 const bookTitle1: string = "The TypeScript Guide";
 const author1: string = "John Doe";
 const price1: number = 29.99;
@@ -59,3 +60,43 @@ borrowBook1("Alice");
 returnBook1();
 borrowBook2("Bob");
 returnBook2();
+
+
+// Marriage system
+const personName1: string = "Alice";
+const age1: number = 25;
+const hasLicense1: boolean = true;
+let spouse1: string | null = null;
+const personId1: symbol = Symbol(personName1);
+
+const personName2: string = "Bob";
+const age2: number = 30;
+const hasLicense2: boolean = false;
+let spouse2: string | null = "Alice";
+const personId2: symbol = Symbol(personName2);
+
+console.log(`Person: ${personName1}, Age: ${age1}, Has License: ${hasLicense1}, Spouse: ${spouse1}`);
+console.log(`Person: ${personName2}, Age: ${age2}, Has License: ${hasLicense2}, Spouse: ${spouse2}`);
+
+function updateSpouse1(newSpouse: string | null): void {
+    spouse1 = newSpouse;
+    console.log(`${personName1} is now married to ${newSpouse ?? "no one"}.`);
+}
+
+function updateSpouse2(newSpouse: string | null): void {
+    spouse2 = newSpouse;
+    console.log(`${personName2} is now married to ${newSpouse ?? "no one"}.`);
+}
+
+function checkDrivingEligibility(name: string, hasLicense: boolean): void {
+    if (hasLicense) {
+        console.log(`${name} is eligible to drive.`);
+    } else {
+        console.log(`${name} is not eligible to drive.`);
+    }
+}
+
+updateSpouse1("Bob");
+updateSpouse2("Alice");
+checkDrivingEligibility(personName1, hasLicense1);
+checkDrivingEligibility(personName2, hasLicense2);
