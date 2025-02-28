@@ -13,7 +13,7 @@ RUN npm install
 # Copy the entire project to the container
 COPY . ./
 
-# Install Playwright browsers
+# Install Playwright browsers1
 RUN npx playwright install --with-deps
 
 # Define the command to run test
