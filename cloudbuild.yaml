@@ -26,4 +26,4 @@ steps:
       - |
         gsutil -m cp -r test-results/* gs://$PROJECT_ID-playwright-results/
 
-timeout: 600s
+timeout: 6000s
