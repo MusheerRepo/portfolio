@@ -16,5 +16,5 @@ COPY . ./
 # Install Playwright browsers
 RUN npx playwright install --with-deps
 
-# Define the command to run tests
+# Define the command to run tests1
 CMD ["npx", "playwright", "test"]
