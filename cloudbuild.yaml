@@ -25,5 +25,7 @@ steps:
       - '-c'
       - |
         gsutil -m cp -r test-results/* gs://$PROJECT_ID-playwright-results/
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 timeout: 6000s
