@@ -31,4 +31,5 @@ artifacts:
 
 options:
   substitutionOption: ALLOW_LOOSE
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY #ensure logging is set to GCS_ONLY.
+logsBucket: 'gs://portfolio-bucke' # Add this line
