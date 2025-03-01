@@ -4,7 +4,7 @@ switch (day) {
         console.log("Monday");
         break;
     case 2:
-        console.log("Tuesday");
+        console.log("Tuessday");
         break;
     case 3:
         console.log("Wednesday");
