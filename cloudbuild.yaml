@@ -1,0 +1,33 @@
+steps:
+  # Install Node.js and dependencies
+  - name: 'node:18'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        npm install
+        npx playwright install --with-deps
+
+  # Run Playwright tests
+  - name: 'node:18'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        npx playwright test --reporter=html
+
+  # Store test results (optional, for HTML report)
+  - name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', '-r', 'playwright-report', 'gs://${_REPORT_BUCKET}/playwright-reports/${BUILD_ID}/']
+    # Add a substitution variable for the report bucket.
+    # To trigger the build you will need to add the substitution:
+    # --substitutions=_REPORT_BUCKET=[YOUR_BUCKET_NAME]
+    # Example: gcloud builds submit --substitutions=_REPORT_BUCKET=my-test-reports
+
+artifacts:
+  objects:
+    location: 'gs://${_REPORT_BUCKET}/playwright-reports/${BUILD_ID}/'
+    paths: ['playwright-report/**']
+
+options:
+  substitutionOption: ALLOW_LOOSE
