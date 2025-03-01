@@ -1,7 +1,7 @@
 const day: number = 3;
 switch (day) {
     case 1:
-        console.log("Monday");
+        console.log("Mosnday");
         break;
     case 2:
         console.log("Tuessday");
