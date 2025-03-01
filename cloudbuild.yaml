@@ -31,3 +31,4 @@ artifacts:
 
 options:
   substitutionOption: ALLOW_LOOSE
+  logging: CLOUD_LOGGING_ONLY
