@@ -21,6 +21,6 @@ steps:
         fi
 
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
   default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
 logsBucket: gs://portfolio-bucke
