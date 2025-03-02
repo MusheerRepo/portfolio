@@ -7,7 +7,7 @@ switch (day) {
         console.log("Tuessday");
         break;
     case 3:
-        console.log("Wednesday");
+        console.log("WedneCsday");
         break;
     case 4:
         console.log("Thursday");
