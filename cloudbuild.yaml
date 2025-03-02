@@ -10,3 +10,5 @@ steps:
     args: ['cp', 'report.xml', 'gs://YOUR_BUCKET/reports/report.xml']
 options:
   logging: CLOUD_LOGGING_ONLY
+logsBucket: gs://portfolio-bucke
+
