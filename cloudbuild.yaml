@@ -6,19 +6,15 @@ steps:
       - |
         npm install
         npx playwright install --with-deps
-        npx playwright test --reporter=junit --output=report.xml
+        npx playwright test
 
   - name: 'gcr.io/cloud-builders/gsutil'
     entrypoint: 'bash'
     args:
       - '-c'
       - |
-        if [ -f report.xml ]; then
-          gsutil cp . gs://portfolio-bucke/reports/report.xml
-        else
-          echo "Error: report.xml not found!"
-          exit 1
-        fi
+        gsutil cp . gs://portfolio-bucke/reports/report.xml
+        
 
 options:
   logging: GCS_ONLY
