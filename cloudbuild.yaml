@@ -13,7 +13,7 @@ steps:
     args:
       - '-c'
       - |
-        gsutil cp . gs://portfolio-bucke/reports/report.xml
+        gsutil -m cp -r playwright-report gs://portfolio-bucke/reports/
         
 
 options:
