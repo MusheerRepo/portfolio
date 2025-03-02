@@ -5,10 +5,22 @@ steps:
       - '-c'
       - |
         npm install
+        npx playwright install --with-deps
+        npx playwright test --reporter=junit --output=report.xml
 
   - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['cp', 'report.xml', 'gs://portfolio-bucke/reports/report.xml']
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        if [ -f report.xml ]; then
+          gsutil cp report.xml gs://portfolio-bucke/reports/report.xml
+        else
+          echo "Error: report.xml not found!"
+          exit 1
+        fi
 
 options:
-  logging: GCS_ONLY
+  logging: CLOUD_LOGGING_ONLY
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
 logsBucket: gs://portfolio-bucke
