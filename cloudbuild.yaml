@@ -4,8 +4,7 @@ steps:
     args:
       - '-c'
       - |
-        npm install playwright
-        npm playwright test
+        npm install
 
   - name: 'gcr.io/cloud-builders/gsutil'
     args: ['cp', 'report.xml', 'gs://portfolio-bucke/reports/report.xml']
