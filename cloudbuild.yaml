@@ -5,6 +5,7 @@ steps:
       - '-c'
       - |
         npm install
+        npm init playwright@latest
         npm playwright test
 
   - name: 'gcr.io/cloud-builders/gsutil'
