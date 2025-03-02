@@ -14,7 +14,7 @@ steps:
       - '-c'
       - |
         if [ -f report.xml ]; then
-          gsutil cp report.xml gs://portfolio-bucke/reports/report.xml
+          gsutil cp . gs://portfolio-bucke/reports/report.xml
         else
           echo "Error: report.xml not found!"
           exit 1
