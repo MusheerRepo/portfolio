@@ -9,6 +9,6 @@ steps:
   - name: 'gcr.io/cloud-builders/gsutil'
     args: ['cp', 'report.xml', 'gs://YOUR_BUCKET/reports/report.xml']
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
 logsBucket: gs://portfolio-bucke
 
