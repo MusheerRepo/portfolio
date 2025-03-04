@@ -100,3 +100,4 @@ updateSpouse1("Bob");
 updateSpouse2("Alice");
 checkDrivingEligibility(personName1, hasLicense1);
 checkDrivingEligibility(personName2, hasLicense2);
+
