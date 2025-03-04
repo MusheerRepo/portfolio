@@ -32,3 +32,15 @@ f4.b();
 (() => {
     console.log("Hello Musheer5")
 })()
+
+function f5(a: number = 2, b?: number) {
+    if (b === undefined) {
+        console.log(`Hello Musheer ${a}`)
+    }
+    else {
+        console.log(`Hello Musheer ${a} ${b}`)
+    }
+} 
+
+f5(6)
+f5(7,8)
