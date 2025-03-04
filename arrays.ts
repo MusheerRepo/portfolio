@@ -54,4 +54,23 @@ console.log(arrc.indexOf(2))
 console.log(arrc.lastIndexOf(12))
 console.log(arrc.includes(1))
 arrc.push(2)
+arrc.push(3)
+arrc.push(4)
+arrc.push(5)
+arrc.push(6)
 console.log(arrc)
+
+arrc.pop()
+console.log(arrc)
+
+let arrpop: number[] = []
+arrpop.pop()
+console.log(arrpop)
+console.log(arrc.reverse())
+console.log(arrc)
+console.log(arrc.shift())
+console.log(arrpop.shift())
+console.log(arrc)
+
+console.log(arrc.slice(-2, -2))
+console.log(arrc.sort())

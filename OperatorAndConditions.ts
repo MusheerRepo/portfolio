@@ -71,7 +71,7 @@ if (userRole === "admin") {
 }
 
 // More calculations with operators
-const a: number = 5;
+const a1: number = 5;
 const b: number = 3;
 console.log("Sum:", a + b);
 console.log("Difference:", a - b);
