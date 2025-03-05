@@ -74,3 +74,7 @@ console.log(arrc)
 
 console.log(arrc.slice(-2, -2))
 console.log(arrc.sort())
+
+// Destructing
+let [y1, y2] = [1,4, 5]
+console.log(y1, y2)
