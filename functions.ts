@@ -44,3 +44,11 @@ function f5(a: number = 2, b?: number) {
 
 f5(6)
 f5(7,8)
+
+let v1 = (...no: number[]) => {
+    no.forEach((v) => {
+        console.log(v)
+    })
+}
+
+v1(1,2,3,4,45,555236236)
