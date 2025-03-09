@@ -55,12 +55,14 @@ v1(1,2,3,4,45,555236236)
 
 // Function overloading
 console.log("Implementing overloading")
-function f1g () {
-    console.log(1)
-}
-
-function f1g(x: number) {
-    console.log(x)
+function f1g(): void
+function f1g(x: number): void
+function f1g (x?: number) {
+    if (x == undefined) {
+        console.log(1)
+    } else {
+        console.log(x)
+    }
 }
 
 f1g()
