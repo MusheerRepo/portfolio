@@ -58,3 +58,26 @@ while(!check1.done) {
     console.log(check1.value)
     check1 = x21.next() 
 }
+
+// New iterator
+function f1(a: number []) {
+    let i:number = 0
+
+    return {
+        next : () => {
+            if (i < a.length) {
+                return {value: a[i++], done: false}
+            } else {
+                return {value: undefined, done: true}
+            }
+        }
+    }
+}
+
+let x122 = f1([1,2,3,4,22])
+let check5 = x122.next()
+
+while(!check5.done) {
+    console.log(check5.value)
+    check5 = x122.next()
+}
