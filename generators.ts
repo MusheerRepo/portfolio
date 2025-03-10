@@ -26,3 +26,17 @@ while(!check2.done) {
     console.log(check2.value)
     check2 = funcvar1.next()
 }
+
+function* g2(a: number[]) {
+    for (let i of a) {
+        yield i
+    }
+}
+
+let funcvar2 = g1()
+let check22 = funcvar1.next()
+
+while(!check2.done) {
+    console.log(check22.value)
+    check22 = funcvar1.next()
+}
