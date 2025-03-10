@@ -33,10 +33,10 @@ function* g2(a: number[]) {
     }
 }
 
-let funcvar2 = g1()
-let check22 = funcvar1.next()
+let funcvar2 = g2([1,2,3])
+let check22 = funcvar2.next()
 
 while(!check2.done) {
     console.log(check22.value)
-    check22 = funcvar1.next()
+    check22 = funcvar2.next()
 }

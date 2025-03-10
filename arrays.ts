@@ -78,3 +78,20 @@ console.log(arrc.sort())
 // Destructing
 let [y1, y2] = [1,4, 5]
 console.log(y1, y2)
+
+
+// Filters, Map, and reduce
+var filerarr = [1,2,3,4,5]
+
+console.log('Using filter function')
+console.log(filerarr.filter((num) => {return num % 2 == 0}))
+
+console.log("Using map function")
+console.log(filerarr.map((v) => {
+    return v % 2 == 0
+}))
+
+console.log("Using reduce function")
+console.log(filerarr.reduce((x33, v33)=> {
+    return x33 + v33
+}))
