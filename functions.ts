@@ -1,8 +1,8 @@
-function f1() {
+function f() {
     console.log("Hello Musheer")
 }
 
-f1()
+f()
 
 const f2 = function () {
     console.log("Hello Musheer1")

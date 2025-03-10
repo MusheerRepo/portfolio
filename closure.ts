@@ -14,7 +14,7 @@ fc()()
 fc()()
 fc()()
 
-const lc = f1()
+const lc = fc()
 lc()
 lc()
 lc()

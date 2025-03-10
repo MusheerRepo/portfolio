@@ -15,5 +15,5 @@ class Musheer {
     }
 }
 
-let x = new Musheer();
-x.print1()
+let xam = new Musheer();
+xam.print1()

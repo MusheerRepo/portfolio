@@ -3,12 +3,12 @@ function* j1() {
     yield "Musheer"
 }
 
-let x = j1()
-let check11 = x.next()
+let xg = j1()
+let check11 = xg.next()
 
 while(!check11.done) {
     console.log(check11.value)
-    check11 = x.next()
+    check11 = xg.next()
 }
 
 // Practice
